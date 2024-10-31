@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8snlr4wkrk5b"]
+
+[ext_resource type="Texture2D" uid="uid://dlw2wovf20vtp" path="res://terrain/objects.png" id="1_xw7i0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lp0ut"]
+texture = ExtResource("1_xw7i0")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.875, 8, -7, 8, -7, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.875, 8, -7, 8, -7, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.875, 8, -7, 8, -7, 8, 8, -8, 8)
+0:5/size_in_atlas = Vector2i(3, 4)
+0:5/0 = 0
+0:5/0/texture_origin = Vector2i(0, 21)
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.875, -7.125, 12, -7.125, 12.25, 8.5, -14.875, 8.75)
+3:5/size_in_atlas = Vector2i(3, 4)
+3:5/0 = 0
+3:5/0/texture_origin = Vector2i(0, 21)
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.875, -7.125, 12, -7.125, 12.25, 8.5, -14.875, 8.75)
+6:7/size_in_atlas = Vector2i(2, 2)
+6:7/0 = 0
+6:7/0/texture_origin = Vector2i(0, 10)
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.875, -7, 16, -6.875, 15.75, 6.25, -16, 7.625)
+8:6/size_in_atlas = Vector2i(2, 3)
+8:6/0 = 0
+8:6/0/texture_origin = Vector2i(0, 13)
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.75, -3.75, 10.125, -3.25, 10.75, 9.625, -10.125, 9.375)
+10:7/size_in_atlas = Vector2i(2, 2)
+10:7/0 = 0
+10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.125, -4.25, 12.375, -4, 12.875, 10.125, -13.375, 9.625)
+11:2/size_in_atlas = Vector2i(1, 2)
+11:2/0 = 0
+11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.75, -12.125, 7.5, -11.875, 7.875, -12.25, 7.375, 12.125, -7.625, 11.75)
+10:0/size_in_atlas = Vector2i(2, 1)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-15.75, -7.75, 15.5, -7.75, 15.5, -7.375, 15.5, 7.875, -15.875, 7.125)
+
+[sub_resource type="TileSet" id="TileSet_25fb6"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_lp0ut")
+
+[node name="TileMap" type="TileMap"]
+y_sort_enabled = true
+tile_set = SubResource("TileSet_25fb6")
+format = 2
+layer_0/y_sort_enabled = true

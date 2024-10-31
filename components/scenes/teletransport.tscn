@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cegmbm5hgyg8k"]
+
+[ext_resource type="Script" path="res://components/scripts/teletransport.gd" id="1_wh5eg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7tw8p"]
+size = Vector2(10, 26)
+
+[sub_resource type="GDScript" id="GDScript_tea8u"]
+script/source = "extends CollisionShape2D
+"
+
+[node name="teletransport" type="Area2D"]
+script = ExtResource("1_wh5eg")
+target_position = Vector2(-296, -577)
+
+[node name="CollisionTele" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7tw8p")
+debug_color = Color(0.670588, 0.0862745, 0, 0.419608)
+script = SubResource("GDScript_tea8u")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

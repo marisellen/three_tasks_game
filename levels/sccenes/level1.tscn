@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvcsylbht1ekn"]
+[gd_scene load_steps=10 format=3 uid="uid://dvcsylbht1ekn"]
 
 [ext_resource type="PackedScene" uid="uid://cb72rl782bh2o" path="res://terrain/scenes/terrain.tscn" id="1_uui1q"]
 [ext_resource type="PackedScene" uid="uid://elqsfqb4s05p" path="res://characters/scenes/character_maid.tscn" id="2_1njnr"]
 [ext_resource type="PackedScene" uid="uid://dngjuhua3i1ko" path="res://terrain/scenes/interior.tscn" id="2_r36o2"]
 [ext_resource type="PackedScene" uid="uid://b8snlr4wkrk5b" path="res://terrain/scenes/objects_terrain.tscn" id="3_3k1kk"]
 [ext_resource type="PackedScene" uid="uid://b25rnksdy7g1p" path="res://components/scenes/door.tscn" id="3_rajrr"]
+[ext_resource type="PackedScene" uid="uid://bso2cjhrlkp4k" path="res://itens/scenes/magicFlower.tscn" id="4_0udqu"]
 [ext_resource type="PackedScene" uid="uid://cegmbm5hgyg8k" path="res://components/scenes/teletransport.tscn" id="4_u4g46"]
+[ext_resource type="PackedScene" uid="uid://bro33o4pnnrwp" path="res://itens/scenes/sap.tscn" id="5_imdmn"]
+[ext_resource type="PackedScene" uid="uid://du8an53pinpk" path="res://itens/scenes/water.tscn" id="7_nuqy0"]
 
 [node name="Level" type="Node2D"]
 
@@ -18,6 +21,17 @@ layer_2/tile_data = PackedInt32Array(-196620, 12, 0, -65529, 65548, 2, 524276, 1
 [node name="Interior" parent="." instance=ExtResource("2_r36o2")]
 layer_0/tile_data = PackedInt32Array(-393203, 131072, 0, -393202, 196608, 0, -327666, 196608, 1, -196595, 131072, 4, -131059, 131072, 5, -196594, 196608, 4, -131058, 196608, 5, -393205, 65536, 0, -393204, 131072, 0, -327669, 65536, 1, -196597, 65536, 4, -131061, 65536, 5, -196596, 131072, 4, -131060, 131072, 5, -262131, 131072, 2, -262130, 196608, 2, -262132, 131072, 2, -262133, 65536, 2, -1769470, 131072, 4, -1769469, 131072, 4, -1769468, 131072, 4, -1835006, 131072, 3, -1835005, 131072, 3, -1835004, 131072, 3, -2228220, 131072, 0, -2228221, 131072, 0, -2228222, 131072, 0, -1769466, 196608, 5, -1769467, 131072, 5, -1835003, 131072, 2, -1835002, 196608, 2, -1900538, 262144, 1, -1966074, 262144, 1, -2031610, 262144, 1, -2097146, 262144, 1, -2162682, 196608, 5, -2228218, 196608, 0, -2228219, 131072, 0, -2162683, 131072, 5, -2162684, 131072, 5, -2162685, 131072, 5, -2162686, 131072, 5, -2162687, 262144, 1, -2228223, 262144, 0, -2097151, 262144, 1, -2031615, 262144, 1, -1966079, 262144, 1, -1900543, 262144, 1, -1769471, 262144, 4, -1835007, 262144, 1)
 layer_1/tile_data = PackedInt32Array(-1835006, 1, 0, -1835005, 1, 0, -1835004, 1, 0, -1835003, 1, 0, -1835002, 1, 0, -1900539, 1, 0, -1900538, 1, 0, -1966074, 1, 0, -2031610, 1, 0, -2097146, 1, 0, -2097147, 1, 0, -2097148, 1, 0, -2097149, 1, 0, -2097150, 1, 0, -2031614, 1, 0, -1966078, 1, 0, -1900542, 1, 0, -1900541, 1, 0, -1900540, 1, 0, -1966076, 1, 0, -2031612, 1, 0, -2031613, 1, 0, -1966077, 1, 0, -2031611, 1, 0, -1966075, 1, 0)
+
+[node name="Itens" type="Node2D" parent="."]
+
+[node name="water" parent="Itens" instance=ExtResource("7_nuqy0")]
+position = Vector2(-128, -56)
+
+[node name="magicFlower" parent="Itens" instance=ExtResource("4_0udqu")]
+position = Vector2(-112, 88)
+
+[node name="sap" parent="Itens" instance=ExtResource("5_imdmn")]
+position = Vector2(56, -64)
 
 [node name="Components" type="Node2D" parent="."]
 z_index = 1
@@ -49,7 +63,7 @@ z_index = 1
 y_sort_enabled = true
 
 [node name="Character_maid" parent="Ysort" instance=ExtResource("2_1njnr")]
-position = Vector2(184, 8)
+position = Vector2(-32, 0)
 
 [node name="Camera2D" type="Camera2D" parent="Ysort/Character_maid"]
 

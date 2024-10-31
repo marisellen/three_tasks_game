@@ -45,3 +45,9 @@ func _animate() -> void:
 		return
 		
 	_state_marchine.travel("idle")
+
+var inventory = {"magicFlower": false, "water": false, "sap": false}
+
+func pick_item(item_name):
+	inventory[item_name] = true
+	print("Item coletado:", item_name)

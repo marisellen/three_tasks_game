@@ -7,12 +7,20 @@ var _player_ref: Character = null
 @export var items_collected : Array = []
 
 func _on_body_entered(_body: Node2D) -> void:
-		pick_up() 
-		print("tocou")
+	_total_items()
+	print("tocou")
 
-func _total_items(items_collected)  -> void:
-	if items_collected.size() == 3:	
-		print("funcionou")
+func _total_items() -> void:
+	var all_collected = true  
+	for item in items_collected:
+		if not item:  
+			all_collected = false
+			break  
+	if all_collected:
+		pick_up() 
+		print("Todos os itens foram coletados. Funcionou!")
+	else:
+		print("Ainda faltam itens a serem coletados.")
 	
 func pick_up() -> void:
 	var glue_scene = load("res://itens/scenes/glue.tscn")

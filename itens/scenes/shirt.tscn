@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://1jyw8fmsa0sn"]
+
+[ext_resource type="Script" path="res://itens/scripts/shirt.gd" id="1_gqqdf"]
+[ext_resource type="Texture2D" uid="uid://bjophoxj04ddr" path="res://itens/1-task/shirt.png" id="1_ptje6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bguel"]
+size = Vector2(14.5, 20)
+
+[node name="shirt" type="Area2D"]
+script = ExtResource("1_gqqdf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ptje6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_bguel")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="item_picked_up" from="." to="." method="_on_item_picked_up"]

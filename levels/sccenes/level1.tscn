@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dvcsylbht1ekn"]
+[gd_scene load_steps=12 format=3 uid="uid://dvcsylbht1ekn"]
 
 [ext_resource type="PackedScene" uid="uid://cb72rl782bh2o" path="res://terrain/scenes/terrain.tscn" id="1_uui1q"]
 [ext_resource type="PackedScene" uid="uid://elqsfqb4s05p" path="res://characters/scenes/character_maid.tscn" id="2_1njnr"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cegmbm5hgyg8k" path="res://components/scenes/teletransport.tscn" id="4_u4g46"]
 [ext_resource type="PackedScene" uid="uid://dvviic70rdv7l" path="res://itens/scenes/cauldron.tscn" id="5_5jnth"]
 [ext_resource type="PackedScene" uid="uid://du8an53pinpk" path="res://itens/scenes/water.tscn" id="5_apu5e"]
+[ext_resource type="PackedScene" uid="uid://1jyw8fmsa0sn" path="res://itens/scenes/shirt.tscn" id="6_uuif6"]
 
 [node name="Level" type="Node2D"]
 
@@ -33,6 +34,9 @@ position = Vector2(56, -48)
 
 [node name="water" parent="Itens" instance=ExtResource("5_apu5e")]
 position = Vector2(-128, -48)
+
+[node name="shirt" parent="Itens" instance=ExtResource("6_uuif6")]
+position = Vector2(48, -472)
 
 [node name="Components" type="Node2D" parent="."]
 z_index = 1

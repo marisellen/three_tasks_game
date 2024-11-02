@@ -20,7 +20,6 @@ func _physics_process(_delta: float) -> void:
 	_animate()
 	move_and_slide()
 
-
 func _move() -> void:
 	var _direction: Vector2 = Vector2(
 		Input.get_axis("move_left", "move_right"),
@@ -37,7 +36,6 @@ func _move() -> void:
 	
 	velocity.x = lerp(velocity.x, _direction.normalized().x * _move_speed, _acceleration)
 	velocity.y = lerp(velocity.y, _direction.normalized().y * _move_speed, _acceleration)
-	
 
 func _animate() -> void:
 	if velocity.length() > 2:
@@ -51,3 +49,4 @@ var inventory = {"magicFlower": false, "water": false, "sap": false}
 func pick_item(item_name):
 	inventory[item_name] = true
 	print("Item coletado:", item_name)
+var items_collected : Array = []

@@ -9,11 +9,9 @@ size = Vector2(8, 12)
 [node name="sap" type="Area2D"]
 script = ExtResource("1_4v31l")
 
-[node name="SapPot" type="Sprite2D" parent="."]
+[node name="Texture" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
 texture = ExtResource("1_l3s6o")
-
-[node name="Texture" type="Sprite2D" parent="."]
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 z_index = 1

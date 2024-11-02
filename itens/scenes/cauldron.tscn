@@ -3,21 +3,18 @@
 [ext_resource type="Script" path="res://itens/scripts/cauldron.gd" id="1_1pu8b"]
 [ext_resource type="Texture2D" uid="uid://cgaqrqp2oqcwb" path="res://itens/1-task/cauldron.png" id="1_wnewf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkgie"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipwlw"]
 size = Vector2(26, 18)
 
 [node name="cauldron" type="Area2D"]
 script = ExtResource("1_1pu8b")
 
-[node name="Cauldron" type="Sprite2D" parent="."]
+[node name="Textura" type="Sprite2D" parent="."]
 position = Vector2(0, -8)
 texture = ExtResource("1_wnewf")
-offset = Vector2(0, -4)
 
-[node name="Texture" type="Sprite2D" parent="."]
-
-[node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(1, -9)
-shape = SubResource("RectangleShape2D_jkgie")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_ipwlw")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

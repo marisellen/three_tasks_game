@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3t00wnm8chmx"]
+
+[ext_resource type="Script" path="res://itens/scripts/glue.gd" id="1_cryd4"]
+[ext_resource type="Texture2D" uid="uid://b1jlu8msedwta" path="res://itens/1-task/glue.png" id="1_xa6tf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yx456"]
+size = Vector2(10, 13)
+
+[node name="glue" type="Area2D"]
+script = ExtResource("1_cryd4")
+
+[node name="Texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_xa6tf")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yx456")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="item_collected" from="." to="." method="_on_item_collected"]

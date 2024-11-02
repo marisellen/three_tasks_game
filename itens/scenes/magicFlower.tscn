@@ -9,10 +9,8 @@ radius = 8.0
 [node name="magicFlower" type="Area2D"]
 script = ExtResource("1_pwrkv")
 
-[node name="MagicFlowers" type="Sprite2D" parent="."]
-texture = ExtResource("1_63sv7")
-
 [node name="Texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_63sv7")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_g2a8c")

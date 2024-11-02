@@ -1,10 +1,22 @@
 extends Area2D
-signal new_item_created
+class_name Cauldron
 
-func _ready() -> void:
- connect("_on_body_entered")
+var _player_ref: Character = null
 
-func _on_body_entered(_body: Node2D):
-	if _body.name == "Character" and _body.inventory["water"] and _body.inventory["magicFlower"] and _body.inventory["sap"]:
-		_body.inventory = {"water": false, "magicFlower": false, "sap": false}  # Limpa o inventário
-		emit_signal("new_item_created")
+@export var glue_scene: PackedScene
+@export var items_collected : Array = []
+
+func _on_body_entered(_body: Node2D) -> void:
+		pick_up() 
+		print("tocou")
+
+func _total_items(items_collected)  -> void:
+	if items_collected.size() == 3:	
+		print("funcionou")
+	
+func pick_up() -> void:
+	var glue_scene = load("res://itens/scenes/glue.tscn")
+	var glue_instance = glue_scene.instantiate()
+	glue_instance.position = position + Vector2(1, 10) 
+	get_parent().add_child(glue_instance)
+	print("item gerado")		

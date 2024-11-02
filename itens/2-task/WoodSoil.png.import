@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd7rd73l4vnp0"
-path="res://.godot/imported/NPC_Butcher.png-f52b8d02c2aca58094c3b7464d8d74df.ctex"
+uid="uid://co30hl3u2bbcu"
+path="res://.godot/imported/WoodSoil.png-d427261344a331ed614c47d709218840.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://itens/2-task/NPC_Butcher.png"
-dest_files=["res://.godot/imported/NPC_Butcher.png-f52b8d02c2aca58094c3b7464d8d74df.ctex"]
+source_file="res://itens/2-task/WoodSoil.png"
+dest_files=["res://.godot/imported/WoodSoil.png-d427261344a331ed614c47d709218840.ctex"]
 
 [params]
 

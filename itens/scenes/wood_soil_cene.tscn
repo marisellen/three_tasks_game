@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://clim5q3ovdbnj"]
+
+[ext_resource type="Script" path="res://itens/scripts/wood_soil_cene.gd" id="1_fcpox"]
+[ext_resource type="Texture2D" uid="uid://co30hl3u2bbcu" path="res://itens/2-task/WoodSoil.png" id="1_ug4cu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ev3r8"]
+size = Vector2(48, 40)
+
+[node name="WoodSoilCene" type="Area2D"]
+script = ExtResource("1_fcpox")
+
+[node name="Texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_ug4cu")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ev3r8")

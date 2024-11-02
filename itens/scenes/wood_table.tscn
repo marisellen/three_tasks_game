@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7c01yww45k50"]
+
+[ext_resource type="Script" path="res://itens/scripts/wood_table.gd" id="1_13gtj"]
+[ext_resource type="Texture2D" uid="uid://drrlnq6o5q6c0" path="res://itens/2-task/wood.png" id="1_bfkc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oipby"]
+size = Vector2(10, 18)
+
+[node name="WoodTable" type="Area2D"]
+script = ExtResource("1_13gtj")
+
+[node name="Textura" type="Sprite2D" parent="."]
+scale = Vector2(0.364286, 0.25)
+texture = ExtResource("1_bfkc8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_oipby")

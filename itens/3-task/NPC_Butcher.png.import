@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c47nregjkjdx2"
-path="res://.godot/imported/skin.png-084b2e41c95003643d51c2ccec31decb.ctex"
+uid="uid://cd7rd73l4vnp0"
+path="res://.godot/imported/NPC_Butcher.png-e793cf42d04096137c7aba88c802b1a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://itens/2-task/skin.png"
-dest_files=["res://.godot/imported/skin.png-084b2e41c95003643d51c2ccec31decb.ctex"]
+source_file="res://itens/3-task/NPC_Butcher.png"
+dest_files=["res://.godot/imported/NPC_Butcher.png-e793cf42d04096137c7aba88c802b1a5.ctex"]
 
 [params]
 

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5422daj721m4"]
+
+[ext_resource type="Script" path="res://itens/scripts/soil.gd" id="1_4gxf7"]
+[ext_resource type="Texture2D" uid="uid://bqn4smqiiipuj" path="res://itens/2-task/soil.png" id="1_7ip3v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pvmoj"]
+
+[node name="Soil" type="Area2D"]
+script = ExtResource("1_4gxf7")
+
+[node name="Texture" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(0.385714, 0.366667)
+texture = ExtResource("1_7ip3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_pvmoj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="item_picked_up" from="." to="." method="_on_item_picked_up"]

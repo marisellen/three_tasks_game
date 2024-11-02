@@ -4,21 +4,15 @@ class_name Cauldron
 var _player_ref: Character = null
 
 @export var glue_scene: PackedScene
-@export var items_collected : Array = []
 
-func _on_body_entered(_body: Node2D) -> void:
-	_total_items()
+func _on_body_entered(body: Node2D) -> void:
 	print("tocou")
-
-func _total_items() -> void:
-	var all_collected = true  
-	for item in items_collected:
-		if not item:  
-			all_collected = false
-			break  
-	if all_collected:
-		pick_up() 
+	if GameState.items_collected.get("MagicFlower") and GameState.items_collected.get("Water") and GameState.items_collected.get("Sap") == true:
+		body.pick_item("MagicFlower")  
+		body.pick_item("Water")
+		body.pick_item("Sap")
 		print("Todos os itens foram coletados. Funcionou!")
+		pick_up()
 	else:
 		print("Ainda faltam itens a serem coletados.")
 	

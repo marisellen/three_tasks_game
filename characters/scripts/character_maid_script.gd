@@ -44,7 +44,6 @@ func _animate() -> void:
 		
 	_state_marchine.travel("idle")
 
-
 func pick_item(item_name):
 	GameState.items_collected[item_name] = true
 	print("Item coletado:", item_name)

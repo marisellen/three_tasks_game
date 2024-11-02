@@ -9,4 +9,6 @@ func _ready():
 
 func _on_body_entered(_body):
 		_body.pick_item("MagicFlower")
+		GameState.items_collected["MagicFlower"] = true
 		queue_free()
+		emit_signal("item_picked_up")

@@ -8,6 +8,7 @@ size = Vector2(10, 10)
 
 [node name="MagicBook" type="Area2D"]
 script = ExtResource("1_fd7ak")
+sickle_position = Vector2(0, 10)
 
 [node name="Texture" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)

@@ -8,6 +8,7 @@ size = Vector2(12.5, 16)
 
 [node name="Butcher" type="Area2D"]
 script = ExtResource("1_3btgu")
+skin_position = Vector2(-5, 20)
 
 [node name="Texture" type="Sprite2D" parent="."]
 position = Vector2(2.38419e-07, -8)

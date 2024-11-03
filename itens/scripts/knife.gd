@@ -9,6 +9,6 @@ func _ready():
 
 func _on_body_entered(_body):
 		_body.pick_item("Knife")
-		GameState.items_collected["Knife"] = true
+		GameState.items3_collected["Knife"] = true
 		queue_free()
 		emit_signal("item_picked_up")

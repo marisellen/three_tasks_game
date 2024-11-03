@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1evb8ni4p21"]
+
+[ext_resource type="Script" path="res://itens/scripts/npc_butcher.gd" id="1_3btgu"]
+[ext_resource type="Texture2D" uid="uid://cd7rd73l4vnp0" path="res://itens/3-task/NPC_Butcher.png" id="1_oksgu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssqjv"]
+size = Vector2(12.5, 16)
+
+[node name="Butcher" type="Area2D"]
+script = ExtResource("1_3btgu")
+
+[node name="Texture" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, -8)
+scale = Vector2(0.2425, 0.2025)
+texture = ExtResource("1_oksgu")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_ssqjv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

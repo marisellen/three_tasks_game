@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cns6wptp0thlu"]
+
+[ext_resource type="Script" path="res://itens/scripts/magic_book.gd" id="1_fd7ak"]
+[ext_resource type="Texture2D" uid="uid://di0b0o2nxdkcf" path="res://itens/3-task/book.png" id="1_o5xur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40nag"]
+size = Vector2(10, 10)
+
+[node name="MagicBook" type="Area2D"]
+script = ExtResource("1_fd7ak")
+
+[node name="Texture" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_o5xur")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_40nag")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvcsylbht1ekn"]
+[gd_scene load_steps=18 format=3 uid="uid://dvcsylbht1ekn"]
 
 [ext_resource type="PackedScene" uid="uid://cb72rl782bh2o" path="res://terrain/scenes/terrain.tscn" id="1_uui1q"]
 [ext_resource type="PackedScene" uid="uid://elqsfqb4s05p" path="res://characters/scenes/character_maid.tscn" id="2_1njnr"]
@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://1jyw8fmsa0sn" path="res://itens/scenes/shirt.tscn" id="6_uuif6"]
 [ext_resource type="PackedScene" uid="uid://b5422daj721m4" path="res://itens/scenes/soil.tscn" id="7_bxgb3"]
 [ext_resource type="PackedScene" uid="uid://c7c01yww45k50" path="res://itens/scenes/wood_table.tscn" id="8_l7hsw"]
+[ext_resource type="PackedScene" uid="uid://b1evb8ni4p21" path="res://itens/scenes/NPC_butcher.tscn" id="9_es7rk"]
+[ext_resource type="PackedScene" uid="uid://cns6wptp0thlu" path="res://itens/scenes/magic_book.tscn" id="10_qvpoj"]
+[ext_resource type="PackedScene" uid="uid://bimd7xu0cd4e1" path="res://itens/scenes/knife.tscn" id="11_cw83i"]
 [ext_resource type="PackedScene" uid="uid://5crgxqylm0hj" path="res://itens/scenes/wood_soil.tscn" id="12_xljup"]
 
 [node name="Level" type="Node2D"]
@@ -46,6 +49,16 @@ position = Vector2(944, 16)
 
 [node name="WoodTable" parent="Itens" instance=ExtResource("8_l7hsw")]
 position = Vector2(1056, 128)
+
+[node name="Butcher" parent="Itens" instance=ExtResource("9_es7rk")]
+z_index = 2
+position = Vector2(96, -472)
+
+[node name="MagicBook" parent="Itens" instance=ExtResource("10_qvpoj")]
+position = Vector2(168, -72)
+
+[node name="Knife" parent="Itens" instance=ExtResource("11_cw83i")]
+position = Vector2(72, -504)
 
 [node name="Components" type="Node2D" parent="."]
 z_index = 1
@@ -83,9 +96,10 @@ z_index = 1
 y_sort_enabled = true
 
 [node name="Character_maid" parent="Ysort" instance=ExtResource("2_1njnr")]
-position = Vector2(1056, 48)
+position = Vector2(40, -488)
 
 [node name="Camera2D" type="Camera2D" parent="Ysort/Character_maid"]
+position = Vector2(48, 24)
 
 [node name="Objects_terrain" parent="Ysort" instance=ExtResource("3_3k1kk")]
 layer_0/tile_data = PackedInt32Array(3, 0, 5, -65528, 0, 5, 262143, 196608, 5, 589821, 196608, 5, 65527, 393216, 7, 262155, 393216, 7, 524300, 524288, 6, 524302, 655360, 7, 524293, 655360, 7, 65531, 0, 1, 131061, 0, 0, 262158, 0, 0, 720903, 393216, 7, 720897, 393216, 7, 786425, 393216, 7, -458745, 655360, 7, -524274, 655360, 7, -393220, 655360, 7, -458749, 0, 5, -524299, 196608, 5, -458754, 393216, 7, -524277, 393216, 7, -524295, 524288, 6, 786428, 524288, 6, 720886, 524288, 6, 720907, 524288, 6, 589838, 524288, 6, -262143, 196608, 5, -196618, 0, 5, -2818078, 196608, 5, -1900564, 196608, 5, -2621466, 196608, 5, -1900580, 196608, 5, -2162727, 0, 5, -2555936, 0, 5, -1835040, 0, 5, -2686995, 0, 5, -2162717, 393216, 7, -2686999, 393216, 7, -2752547, 393216, 7, -1966104, 393216, 7, -2490387, 524288, 6, -1966109, 524288, 6, -1900571, 655360, 7, -2752550, 655360, 7, -2097186, 393216, 7, -2621476, 0, 1, 655364, 0, 1, 786421, 0, 1, 393223, 0, 1, -2097147, 720896, 2, -1900540, 655360, 0, -2031611, 327680, 0)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bimd7xu0cd4e1"]
+
+[ext_resource type="Script" path="res://itens/scripts/knife.gd" id="1_1fwh4"]
+[ext_resource type="Texture2D" uid="uid://ga2720nnlpnc" path="res://itens/3-task/knife.png" id="1_a7acl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxu87"]
+size = Vector2(10, 5)
+
+[node name="Knife" type="Area2D"]
+script = ExtResource("1_1fwh4")
+
+[node name="Texture" type="Sprite2D" parent="."]
+scale = Vector2(0.34, 0.5)
+texture = ExtResource("1_a7acl")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gxu87")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="item_picked_up" from="." to="." method="_on_item_picked_up"]

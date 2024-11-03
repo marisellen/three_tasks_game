@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5xa2fers3tk8"]
+
+[ext_resource type="Texture2D" uid="uid://c47nregjkjdx2" path="res://itens/3-task/skin.png" id="1_bmh1n"]
+[ext_resource type="Script" path="res://itens/scripts/skin.gd" id="1_o0hfw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48iiy"]
+size = Vector2(24, 24)
+
+[node name="Skin" type="Area2D"]
+script = ExtResource("1_o0hfw")
+
+[node name="Texture" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, -4.76837e-07)
+scale = Vector2(0.516667, 0.516667)
+texture = ExtResource("1_bmh1n")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_48iiy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="item_picked_up" from="." to="." method="_on_item_picked_up"]

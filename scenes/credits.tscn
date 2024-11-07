@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccmkow87t8agf"]
+
+[ext_resource type="Theme" uid="uid://d2c7cwsbhhso3" path="res://default_buttons.tres" id="1_8v44l"]
+[ext_resource type="Script" path="res://scripts/credits.gd" id="1_r0iss"]
+
+[sub_resource type="Theme" id="Theme_v3yry"]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0.252028, 0.252028, 0.252028, 0)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_r0iss")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 320.0
+offset_bottom = 192.0
+theme = SubResource("Theme_v3yry")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -64.0
+offset_right = 175.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.725338, 0.813893)
+text = "Creator: Mariana Selene
+GitHub: marisellen
+Made for a college assignment.
+Based on the song The Elfin Knight.
+"
+
+[node name="back_button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.770833
+anchor_right = 0.565625
+anchor_bottom = 0.869792
+theme = ExtResource("1_8v44l")
+text = "Back"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="Panel/back_button" to="." method="_on_back_button_button_up"]

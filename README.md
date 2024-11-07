@@ -8,3 +8,5 @@ Mini RPG baseado na canção folclórica Celta The Elfin Knight.
 * Tela Final
 * Cutscenes
 * Interações com NPC
+
+Estado go jogo atual na Branch TercVer.

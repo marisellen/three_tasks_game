@@ -1,8 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://elqsfqb4s05p"]
+[gd_scene load_steps=25 format=3 uid="uid://elqsfqb4s05p"]
 
 [ext_resource type="Script" path="res://characters/scripts/character_maid_script.gd" id="1_r1asc"]
 [ext_resource type="Texture2D" uid="uid://nu8q4cb03sy0" path="res://characters/assets/maid sprite.png" id="2_qyrh6"]
-[ext_resource type="PackedScene" uid="uid://b7xbllmyvr05v" path="res://dialog/dialogo_maid.tscn" id="3_hvlyb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a2m5x"]
 size = Vector2(14, 4)
@@ -466,10 +465,3 @@ tree_root = SubResource("AnimationNodeStateMachine_o0cmu")
 anim_player = NodePath("../Animation")
 parameters/idle/blend_position = Vector2(0, 0)
 parameters/walk/blend_position = Vector2(0, 0)
-
-[node name="Dialogo maid" parent="." instance=ExtResource("3_hvlyb")]
-z_index = 3
-offset_left = -112.0
-offset_top = 16.0
-offset_right = -112.0
-offset_bottom = 16.0

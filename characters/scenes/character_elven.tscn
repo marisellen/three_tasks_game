@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://x8apb2r7tcut"]
+[gd_scene load_steps=18 format=3 uid="uid://x8apb2r7tcut"]
 
 [ext_resource type="Script" path="res://characters/scripts/character_elven.gd" id="1_8qdjn"]
 [ext_resource type="Texture2D" uid="uid://bswl0iu78mjlv" path="res://characters/assets/elven sprite.png" id="1_gfqay"]
 [ext_resource type="PackedScene" uid="uid://bq7ha2ves6w4k" path="res://dialog/dialogo_elven.tscn" id="3_mvhl1"]
+[ext_resource type="PackedScene" uid="uid://b7xbllmyvr05v" path="res://dialog/dialogo_maid.tscn" id="4_qd8pk"]
 
 [sub_resource type="Animation" id="Animation_24o4u"]
 length = 0.001
@@ -271,6 +272,13 @@ position = Vector2(0, -11.25)
 shape = SubResource("RectangleShape2D_2mi56")
 
 [node name="Dialogo elven" parent="." instance=ExtResource("3_mvhl1")]
+z_index = 3
+offset_left = -56.0
+offset_top = 32.0
+offset_right = -56.0
+offset_bottom = 32.0
+
+[node name="Dialogo maid" parent="." instance=ExtResource("4_qd8pk")]
 z_index = 3
 offset_left = -56.0
 offset_top = 32.0

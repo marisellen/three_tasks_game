@@ -15,16 +15,11 @@ var dialog_active = false
 
 func _ready() -> void:
 	_state_marchine = _animation_tree["parameters/playback"]
-	$"Dialogo maid".visible = false
 	
 func _physics_process(_delta: float) -> void:
 	_move()
 	_animate()
 	move_and_slide()
-
-func _on_button_pressed() -> void:
-		$"Dialogo maid".show()
-		print("click")
 
 func _move() -> void:
 	var _direction: Vector2 = Vector2(

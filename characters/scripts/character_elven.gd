@@ -15,6 +15,7 @@ func _ready() -> void:
 		_state_machine = _animation_tree.get("parameters/playback")
 		_set_idle_direction(_current_direction)
 	$"Dialogo elven".visible = false
+	$"Dialogo maid".visible = false
 	
 func _physics_process(_delta: float) -> void:
 	_animate()

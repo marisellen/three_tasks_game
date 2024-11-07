@@ -1,0 +1,51 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://d2c7cwsbhhso3"]
+
+[ext_resource type="FontFile" uid="uid://cn6g7t1pdwb6m" path="res://assets/dum1.ttf" id="1_vksxw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_la2lm"]
+bg_color = Color(4.21144e-08, 0.254967, 0.0454761, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(4.21144e-08, 0.254967, 0.0454761, 1)
+expand_margin_top = 4.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gd18i"]
+bg_color = Color(4.21144e-08, 0.254967, 0.0454761, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(4.21144e-08, 0.254967, 0.0454761, 1)
+expand_margin_top = 4.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fiur1"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+expand_margin_top = 4.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hogxm"]
+bg_color = Color(4.21144e-08, 0.254967, 0.0454761, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(4.21144e-08, 0.254967, 0.0454761, 1)
+expand_margin_top = 4.0
+expand_margin_bottom = 2.0
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_vksxw")
+Button/styles/focus = SubResource("StyleBoxFlat_la2lm")
+Button/styles/hover = SubResource("StyleBoxFlat_gd18i")
+Button/styles/normal = SubResource("StyleBoxFlat_fiur1")
+Button/styles/pressed = SubResource("StyleBoxFlat_hogxm")

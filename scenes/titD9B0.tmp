@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://bavkasasyl6s5"]
+
+[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_nbld1"]
+[ext_resource type="Texture2D" uid="uid://fh0y0mbrmev" path="res://assets/bg_screen.png" id="1_rfotr"]
+[ext_resource type="Texture2D" uid="uid://d1rp7ym0tperq" path="res://assets/title_font.png" id="2_ukfhk"]
+[ext_resource type="Theme" uid="uid://d2c7cwsbhhso3" path="res://default_buttons.tres" id="3_rar4w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c605t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ss7mx"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nbld1")
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_rfotr")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -16.0
+offset_right = -8.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Game_logo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_ukfhk")
+
+[node name="Start_nutton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_rar4w")
+text = "START"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_c605t")
+
+[node name="Credits_nutton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_rar4w")
+text = "CREDITS"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ss7mx")
+
+[node name="quit_nutton" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_rar4w")
+text = "QUIT"
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Start_nutton" to="." method="_on_start_nutton_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Credits_nutton" to="." method="_on_credits_nutton_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/quit_nutton" to="." method="_on_quit_nutton_pressed"]

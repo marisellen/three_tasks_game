@@ -12,6 +12,8 @@ Label/colors/font_shadow_color = Color(0.252028, 0.252028, 0.252028, 0)
 script = ExtResource("1_r0iss")
 
 [node name="Panel" type="Panel" parent="."]
+modulate = Color(0.856067, 0.856067, 0.856067, 1)
+self_modulate = Color(2.83971e-06, 0.551674, 0.158055, 1)
 offset_right = 320.0
 offset_bottom = 192.0
 theme = SubResource("Theme_v3yry")

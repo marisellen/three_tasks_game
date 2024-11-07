@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Character
 
 var _state_marchine
+var dialog_active = false
 
 @export_category("Variables")
 @export var _move_speed: float = 64.0
@@ -14,11 +15,16 @@ var _state_marchine
 
 func _ready() -> void:
 	_state_marchine = _animation_tree["parameters/playback"]
-
+	$"Dialogo maid".visible = false
+	
 func _physics_process(_delta: float) -> void:
 	_move()
 	_animate()
 	move_and_slide()
+
+func _on_button_pressed() -> void:
+		$"Dialogo maid".show()
+		print("click")
 
 func _move() -> void:
 	var _direction: Vector2 = Vector2(

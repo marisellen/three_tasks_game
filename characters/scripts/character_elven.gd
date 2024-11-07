@@ -1,12 +1,8 @@
-extends CharacterBody2D
+extends Area2D
 class_name NPC
 
 var _state_machine
-
-@export_category("Variables")
-@export var _move_speed: float = 64.0
-@export var _friction: float = 0.8
-@export var _acceleration: float = 0.4
+var dialog_active = false
 
 @export_category("Objects")
 @export var _animation_tree: AnimationTree = null
@@ -18,11 +14,18 @@ func _ready() -> void:
 	if _animation_tree:
 		_state_machine = _animation_tree.get("parameters/playback")
 		_set_idle_direction(_current_direction)
-	else:
-		push_error("AnimationTree não está atribuído no Inspetor para o NPC")
-
+	$"Dialogo elven".visible = false
+	
 func _physics_process(_delta: float) -> void:
 	_animate()
+	
+func _on_body_entered(body: Node2D) -> void:
+	$"Dialogo elven".show()
+	print("tocou")
+
+func _on_body_exited(body: Node2D) -> void:
+	$"Dialogo elven".hide()
+	print("saiu")
 
 func _animate() -> void:
 	if _animation_tree and _state_machine:

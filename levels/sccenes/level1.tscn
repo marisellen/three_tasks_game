@@ -98,7 +98,7 @@ z_index = 1
 y_sort_enabled = true
 
 [node name="Character_maid" parent="Ysort" instance=ExtResource("2_1njnr")]
-position = Vector2(-504, -600)
+position = Vector2(-16, 8)
 
 [node name="Camera2D" type="Camera2D" parent="Ysort/Character_maid"]
 position = Vector2(48, 24)
